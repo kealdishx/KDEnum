@@ -21,7 +21,7 @@ typedef NS_ENUM(type, name) { \
 __VA_ARGS__ \
 }; \
 \
-__attribute__((overloadable)) static inline BOOL __unused KSEnumIsValid##name(name value) \
+__attribute__((overloadable)) static inline BOOL __unused KDEnumIsValid##name(name value) \
 { \
   return kd_enum_is_valid_value(@(#__VA_ARGS__), @((name)value)); \
-} \
+}

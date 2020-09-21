@@ -36,16 +36,16 @@
 @implementation KDEnumRepresentation
 
 - (instancetype)initWithEnumDefinition:(NSString *)enumDefinition {
-  self = [super init];
-  if (self) {
-    [self setupWithEnumDefinition:enumDefinition];
-  }
-  return self;
+    self = [super init];
+    if (self) {
+        [self setupWithEnumDefinition:enumDefinition];
+    }
+    return self;
 }
 
 - (nullable NSString *)stringForNumber:(NSNumber *)number {
-  NSAssert(!self.containsDuplicates, @"枚举定义中有重复的枚举值！");
-  return self.valueMapDict[number];
+    NSAssert(!self.containsDuplicates, @"枚举定义中有重复的枚举值！");
+    return self.valueMapDict[number];
 }
 
 #pragma mark - Private
